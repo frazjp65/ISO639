@@ -1,4 +1,6 @@
 {
+    "name": "frazjp65/iso639",
+    "description": "A PHP library for ISO 639 Language Codes.",
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.1",
         "phpunit/phpunit": "^6.4"
