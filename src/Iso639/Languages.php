@@ -3485,7 +3485,7 @@ final class Languages
         return self::filterLanguagesByKey('french');
     }
 
-    final private static function filterLanguagesByKey(string $key)
+    final private static function filterLanguagesByKey($key)
     {
         if (array_key_exists($key, self::$cache) && self::$cache[$key]) {
             return self::$cache[$key];
