@@ -13,9 +13,9 @@
  *
  */
 
-namespace frazjp65;
+namespace Iso639;
 
-final class Iso639
+final class Languages
 {
     private static $languages = [
         'aar' => [

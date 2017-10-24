@@ -10,18 +10,18 @@ The codes are from the [Library of Congress](https://www.loc.gov/standards/iso63
 
 ```php
 // by bibliograhpic
-$languages = Iso639::getLanguages();
-$languages = Iso639::getLanguagesByBibliographic(); // the same thing
+$languages = Iso639\Language::getLanguages();
+$languages = Iso639\Language::getLanguagesByBibliographic(); // the same thing
 
 // by terminologic
-$languages = Iso639::getLanguagesByTerminologic();
+$languages = Iso639\Language::getLanguagesByTerminologic();
 
 // by alpha-2
-$languages = Iso639::getLanguagesByAlpha2();
+$languages = Iso639\Language::getLanguagesByAlpha2();
 
 // by English name
-$languages = Iso639::getLanguagesByEnglish();
+$languages = Iso639\Language::getLanguagesByEnglish();
 
 // by French name
-$languages = Iso639::getLanguagesByFrench();
+$languages = Iso639\Language::getLanguagesByFrench();
 ```

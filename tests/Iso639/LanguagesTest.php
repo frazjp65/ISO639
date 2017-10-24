@@ -1,8 +1,6 @@
 <?php
 
-namespace frazjp65;
-
-require_once __DIR__ . '/../src/Iso639.php';
+require_once __DIR__ . '/../../src/Iso639/Languages.php';
 
 use PHPUnit\Framework\TestCase;
 
@@ -10,26 +8,26 @@ class Iso639Test extends TestCase
 {
     public function testConstructor()
     {
-        $iso = new Iso639();
-        $this->assertInstanceOf('frazjp65\Iso639', $iso);
+        $iso = new Iso639\Languages();
+        $this->assertInstanceOf('Iso639\Languages', $iso);
     }
 
     public function testGetLanguages()
     {
-        $this->byBibliographic(Iso639::getLanguages());
+        $this->byBibliographic(Iso639\Languages::getLanguages());
     }
 
     public function testGetLanguagesByBibliographic()
     {
-        $this->byBibliographic(Iso639::getLanguagesByBibliographic());
+        $this->byBibliographic(Iso639\Languages::getLanguagesByBibliographic());
     }
 
     public function testGetLanguagesByTerminologic()
     {
-        $languages = Iso639::getLanguagesByTerminologic();
+        $languages = Iso639\Languages::getLanguagesByTerminologic();
 
         $this->assertInternalType('array', $languages);
-        $this->assertNotEquals(count(Iso639::getLanguages()), count($languages));
+        $this->assertNotEquals(count(Iso639\Languages::getLanguages()), count($languages));
 
         foreach ($languages as $key => $language) {
             $this->assertEquals($key, $language['terminologic']);
@@ -40,10 +38,10 @@ class Iso639Test extends TestCase
 
     public function testGetLanguagesByAlpha2()
     {
-        $languages = Iso639::getLanguagesByAlpha2();
+        $languages = Iso639\Languages::getLanguagesByAlpha2();
 
         $this->assertInternalType('array', $languages);
-        $this->assertNotEquals(count(Iso639::getLanguages()), count($languages));
+        $this->assertNotEquals(count(Iso639\Languages::getLanguages()), count($languages));
 
         foreach ($languages as $key => $language) {
             $this->assertEquals($key, $language['alpha-2']);
@@ -54,10 +52,10 @@ class Iso639Test extends TestCase
 
     public function testGetLanguagesByEnglish()
     {
-        $languages = Iso639::getLanguagesByEnglish();
+        $languages = Iso639\Languages::getLanguagesByEnglish();
 
         $this->assertInternalType('array', $languages);
-        $this->assertEquals(count(Iso639::getLanguages()), count($languages));
+        $this->assertEquals(count(Iso639\Languages::getLanguages()), count($languages));
 
         foreach ($languages as $key => $language) {
             $this->assertEquals($key, $language['english']);
@@ -67,10 +65,10 @@ class Iso639Test extends TestCase
 
     public function testGetLanguagesByFrench()
     {
-        $languages = Iso639::getLanguagesByFrench();
+        $languages = Iso639\Languages::getLanguagesByFrench();
 
         $this->assertInternalType('array', $languages);
-        $this->assertEquals(count(Iso639::getLanguages()), count($languages));
+        $this->assertEquals(count(Iso639\Languages::getLanguages()), count($languages));
 
         foreach ($languages as $key => $language) {
             $this->assertEquals($key, $language['french']);
@@ -81,7 +79,7 @@ class Iso639Test extends TestCase
     private function byBibliographic(array $languages)
     {
         $this->assertInternalType('array', $languages);
-        $this->assertEquals(count(Iso639::getLanguages()), count($languages));
+        $this->assertEquals(count(Iso639\Languages::getLanguages()), count($languages));
 
         foreach ($languages as $key => $language) {
             $this->assertEquals($key, $language['bibliographic']);
