@@ -1,0 +1,7 @@
+language: php
+php:
+    - '7.0'
+install: composer install
+script:
+    - vendor/bin/phpcs src/ tests/
+    - vendor/bin/phpunit --configuration tests/phpunit.xml
