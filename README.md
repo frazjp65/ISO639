@@ -25,3 +25,5 @@ $languages = Iso639\Language::getLanguagesByEnglish();
 // by French name
 $languages = Iso639\Language::getLanguagesByFrench();
 ```
+
+[![Build Status](https://travis-ci.org/frazjp65/ISO639.svg?branch=master)](https://travis-ci.org/frazjp65/ISO639)
