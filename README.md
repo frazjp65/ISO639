@@ -28,5 +28,5 @@ $languages = Iso639\Language::getLanguagesByFrench();
 
 [![Build Status](https://travis-ci.org/frazjp65/ISO639.svg?branch=master)](https://travis-ci.org/frazjp65/ISO639)
 [![Coverage Status](https://coveralls.io/repos/github/frazjp65/ISO639/badge.svg)](https://coveralls.io/github/frazjp65/ISO639)
-[![Coding Standards](https://img.shields.io/badge/cs-PSR--2--R-yellow.svg)](https://github.com/frazjp65/ISO639)
+[![Coding Standards](https://img.shields.io/badge/cs-PSR--2--R-yellow.svg)](https://github.com/php-fig-rectified/fig-rectified-standards)
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
