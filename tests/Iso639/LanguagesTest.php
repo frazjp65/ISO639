@@ -48,6 +48,9 @@ class Iso639Test extends TestCase
             $this->assertNotEmpty($language['alpha-2']);
             $this->assertLanguage($language);
         }
+
+        // test that the cache returns something
+        $this->assertEquals($languages, Iso639\Languages::getLanguagesByAlpha2());
     }
 
     public function testGetLanguagesByEnglish()
