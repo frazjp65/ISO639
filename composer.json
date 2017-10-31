@@ -3,7 +3,8 @@
     "description": "A PHP library for ISO 639 Language Codes.",
     "require-dev": {
         "squizlabs/php_codesniffer": "*",
-        "phpunit/phpunit": "*"
+        "phpunit/phpunit": "*",
+        "php-coveralls/php-coveralls": "dev-master"
     },
     "autoload": {
         "psr-0": {

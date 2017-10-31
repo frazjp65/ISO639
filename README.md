@@ -27,3 +27,4 @@ $languages = Iso639\Language::getLanguagesByFrench();
 ```
 
 [![Build Status](https://travis-ci.org/frazjp65/ISO639.svg?branch=master)](https://travis-ci.org/frazjp65/ISO639)
+[![Coverage Status](https://coveralls.io/repos/github/frazjp65/ISO639/badge.svg)](https://coveralls.io/github/frazjp65/ISO639)
