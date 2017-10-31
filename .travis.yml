@@ -7,4 +7,4 @@ script:
     - vendor/bin/phpcs src/
     - vendor/bin/phpunit --configuration tests/phpunit.xml
 after_success:
-    - travis_retry php vendor/bin/coveralls -v
+    - vendor/bin/coveralls -v
